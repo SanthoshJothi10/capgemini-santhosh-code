@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">BarclaysTest</string>
+    <string name="recepient_name">Recepient Name</string>
+    <string name="account_number">Account Number</string>
+    <string name="amount">Amount</string>
+    <string name="iban">IBAN </string>
+    <string name="swift_code">SWIFT code </string>
+
+    <string name="recepient_name_error">Please enter the recepient name </string>
+    <string name="account_number_error">please enter the account number</string>
+    <string name="amount_error">please enter the amount</string>
+    <string name="iban_error">IBAN must be exactly 34 characters</string>
+    <string name="swift_code_error">Please enter the swift code</string>
+
+
+    <string name="domestic">Domestic Transfer</string>
+    <string name="internation">International Transfer</string>
+    <string name="payment_option">Choose the payment option</string>
+
+    <string name="transfer">Transfer</string>
+    <string name="cancel">Cancel</string>
+    <string name="confirm">Confirmation</string>
+    <string name="successful">Your transaction is successfully sent!</string>
+    <string name="back">Back</string>
+
+
+
+
+
+
+
+
+
+</resources>
