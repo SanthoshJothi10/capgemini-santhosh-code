@@ -19,6 +19,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
@@ -72,7 +73,7 @@ fun PaymentScreen(navController: NavController, selectedOptionValue: String?) {
             singleLine = true,
             isError = recipientError,
             modifier = Modifier
-                .fillMaxWidth()
+                .fillMaxWidth().testTag("RecepientField")
         )
         Spacer(modifier = Modifier.padding(2.dp))
         if (recipientError) Text(
@@ -92,7 +93,7 @@ fun PaymentScreen(navController: NavController, selectedOptionValue: String?) {
             placeholder = { Text(text = stringResource(R.string.account_number)) },
             singleLine = true,
             isError = accountError,
-            modifier = Modifier.fillMaxWidth(),
+            modifier = Modifier.fillMaxWidth().testTag("AccountField"),
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password)
         )
         if (accountError) {
@@ -113,7 +114,7 @@ fun PaymentScreen(navController: NavController, selectedOptionValue: String?) {
             placeholder = { Text(text = stringResource(R.string.amount)) },
             singleLine = true,
             isError = amountError,
-            modifier = Modifier.fillMaxWidth(),
+            modifier = Modifier.fillMaxWidth().testTag("AmountField"),
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Decimal)
 
         )
@@ -137,7 +138,7 @@ fun PaymentScreen(navController: NavController, selectedOptionValue: String?) {
                 },
                 label = { Text(stringResource(R.string.iban)) },
                 placeholder = { Text(text = stringResource(R.string.iban)) },
-                modifier = Modifier.fillMaxWidth(),
+                modifier = Modifier.fillMaxWidth().testTag("ibanField"),
                 singleLine = true,
                 isError = iBanError,
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Ascii)
@@ -159,7 +160,7 @@ fun PaymentScreen(navController: NavController, selectedOptionValue: String?) {
                 },
                 placeholder = { Text(text = stringResource(R.string.swift_code)) },
                 label = { Text(stringResource(R.string.swift_code)) },
-                modifier = Modifier.fillMaxWidth(),
+                modifier = Modifier.fillMaxWidth().testTag("swiftCodeField"),
                 singleLine = true,
                 isError = swiftCodeError
             )
